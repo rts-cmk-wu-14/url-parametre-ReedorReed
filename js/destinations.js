@@ -26,7 +26,7 @@ function showData(data) {
             <img src="../img/${data.image}" class="details__image">
             <div class="details__favorite-btn">
                 <img src="../img/heart.svg" class="details__heart-icon">
-                <p>FAVORITE</p>
+                <p class="details__favorite-btn-text">FAVORITE</p>
             </div>
         </figure>
 
@@ -38,9 +38,12 @@ function showData(data) {
 
             <div class="details__description">
                 <p>${data.text}</p>
-                <ul>
-                    ${li}
-                </ul>
+                <div class="details__description-list">
+                    <h2 class="details__description-list-heading">Facilities</h2>
+                    <ul>
+                        ${li}
+                    </ul>
+                </div>
             </div>
         </article>
     </section>
