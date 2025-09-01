@@ -1,4 +1,5 @@
 const mainContainer = document.querySelector('#container');
+const mainWrapper = document.querySelector('#wrapper');
 
 let params = new URLSearchParams(window.location.search);
 const id = params.get('id');
@@ -13,7 +14,37 @@ fetch(`../data/${id}.json`)
 	});
 
 function showData(data) {
-	const content = `<h2>${data.title}</h2>`;
+	let li = data.facilities
+		.map((element) => {
+			return `<li>${element}</li>`;
+		})
+		.join('');
 
-	mainContainer.insertAdjacentHTML('beforeend', content);
+	const content = /*html */ `
+    <section class="details">
+        <figure>
+            <img src="../img/${data.image}" class="details__image">
+            <div class="details__favorite-btn">
+                <img src="../img/heart.svg" class="details__heart-icon">
+                <p>FAVORITE</p>
+            </div>
+        </figure>
+
+        <article class="details__text-wrapper">
+            <div class="details__header">
+                <div class="details__location">${data.destination.toUpperCase()}</div>
+                <h1 class="details__title">${data.subtitle}</h1>
+            </div>
+
+            <div class="details__description">
+                <p>${data.text}</p>
+                <ul>
+                    ${li}
+                </ul>
+            </div>
+        </article>
+    </section>
+    `;
+
+	mainWrapper.insertAdjacentHTML('beforeend', content);
 }

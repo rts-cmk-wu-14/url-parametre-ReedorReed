@@ -1,4 +1,5 @@
 const mainContainer = document.querySelector('#container');
+const mainWrapper = document.querySelector('#wrapper');
 
 fetch('../data/destinations.json')
 	.then((response) => response.json())
@@ -12,14 +13,16 @@ function content(destinations) {
 			return /*html */ `
             <figure class="card">
                 <img src="../img/${destination.image}" class="card__image">
-                <figcaption class="card__text">
+                <figcaption class="card__description">
                     <h2 class="card__title">${destination.title}</h2>
-                    <img src="../img/heart.svg" class="card__heart-icon">
-                    <a href="destination.html?id=${destination.id}" class="card__link">SE MERE</a>
+                    <div class="card__favorite">
+                        <img src="../img/heart.svg" class="card__favorite-btn">
+                        <a href="destination.html?id=${destination.id}" class="card__favorite-link">SE MERE</a>
+                    </div>
                 </figcaption>
             </figure>
         `;
 		})
 		.join('');
-	mainContainer.insertAdjacentHTML('beforeend', destinationDom);
+	mainWrapper.insertAdjacentHTML('beforeend', destinationDom);
 }
