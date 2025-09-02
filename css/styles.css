@@ -1,7 +1,6 @@
-
 #container {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	padding: 5rem;
 }
 
@@ -9,16 +8,16 @@
 	margin-bottom: 2rem;
 	font-size: 50px;
 	font-family: 'Inter', sans-serif;
-    align-self: flex-start;
-    margin-left: 5rem;
+	align-self: flex-start;
+	margin-left: 5rem;
 }
 
 #wrapper {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    width: 88%;
-    align-self: center;
+	gap: 10px;
+	width: 88%;
+	align-self: center;
 }
 
 .card {
@@ -36,10 +35,10 @@
 .card__description {
 	background-color: #cef9ff;
 	padding: 10px;
-    height: 6em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	height: 6em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .card__title {
@@ -49,26 +48,30 @@
 }
 
 .card__favorite {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
 }
 
 .card__favorite-btn {
-    width: 16px;
+	width: 16px;
 	height: 16px;
-    --fillColor: #000;
+	--fillColor: #000;
 }
 .card__favorite-btn:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    --fillColor: red;
+	cursor: pointer;
+	transform: scale(1.1);
+	--fillColor: red;
 }
 
 .card__favorite-link {
-    font-size: 14px;
-    color: #000;
+	font-size: 14px;
+	color: #000;
 }
 .card__favorite-link:hover {
-    text-decoration: underline;
+	text-decoration: underline;
+}
+
+.active svg {
+	--fillColor: red;
 }

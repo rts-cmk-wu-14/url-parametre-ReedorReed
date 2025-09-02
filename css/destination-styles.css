@@ -37,6 +37,10 @@
 	--fillColor: red;
 }
 
+.active svg {
+	--fillColor: red;
+}
+
 .details__favorite-btn-text {
 	font-size: 16px;
 	font-weight: 700;
