@@ -44,3 +44,6 @@ a {
 
 /* -----------reset end------------ */
 
+.active svg {
+	--fillColor: red;
+}

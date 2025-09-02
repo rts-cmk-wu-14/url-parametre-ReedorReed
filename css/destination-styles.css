@@ -33,12 +33,7 @@
 
 .details__heart-icon:hover {
 	cursor: pointer;
-	stroke: red;
-    stroke-width: 1px;
-}
-
-.active svg {
-	--fillColor: red;
+	transform: scale(1.1);
 }
 
 .details__favorite-btn-text {

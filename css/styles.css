@@ -10,6 +10,11 @@
 	font-family: 'Inter', sans-serif;
 	align-self: flex-start;
 	margin-left: 5rem;
+    background-color: #cef9ff;
+    padding: 5px;
+    width: 88%;
+    height: 1.5em;
+    text-align: center;
 }
 
 #wrapper {
@@ -61,8 +66,6 @@
 .card__favorite-btn:hover {
 	cursor: pointer;
 	transform: scale(1.1);
-    stroke: red;
-    stroke-width: 2px;
 }
 
 .card__favorite-link {
@@ -73,6 +76,3 @@
 	text-decoration: underline;
 }
 
-.active svg {
-	--fillColor: red;
-}
