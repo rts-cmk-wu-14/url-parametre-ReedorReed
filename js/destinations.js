@@ -56,24 +56,6 @@ function showData(data) {
 
 	mainWrapper.insertAdjacentHTML('beforeend', content);
 
-	// Change color of favorite btn
-
-	/*const favoriteCardBtn = document.querySelectorAll('.clickBtn');
-
-	favoriteCardBtn.forEach((icon) => {
-		icon.addEventListener('click', changeBtnColor);
-	});
-
-	function changeBtnColor() {
-		this.classList.toggle('fill');
-		if (this.classList.contains('fill')) {
-			this.style.cssText = '--fillColor: red';
-			saveRed();
-		} else {
-			this.style.cssText = '--fillColor: #000';
-		}
-    }
-    */
 
 	const hearts = mainWrapper.querySelectorAll('[data-id]');
 	//console.log(hearts);
