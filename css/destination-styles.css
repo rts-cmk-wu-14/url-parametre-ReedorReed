@@ -32,9 +32,9 @@
 }
 
 .details__heart-icon:hover {
-	transform: scale(1.1);
 	cursor: pointer;
-	--fillColor: red;
+	stroke: red;
+    stroke-width: 1px;
 }
 
 .active svg {

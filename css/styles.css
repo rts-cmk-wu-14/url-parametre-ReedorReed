@@ -61,7 +61,8 @@
 .card__favorite-btn:hover {
 	cursor: pointer;
 	transform: scale(1.1);
-	--fillColor: red;
+    stroke: red;
+    stroke-width: 2px;
 }
 
 .card__favorite-link {
